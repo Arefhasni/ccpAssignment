@@ -1,0 +1,51 @@
+convention:
+    variable: camelCase
+    const declaration: ALL_CAPS
+    function: snake_case
+
+ifstream -> create_table -> vector<pair<string, string>>
+	* get every column type from input file
+      (use loop). Each type is seperated by ','.
+      Loop until we find ');'.
+  * returns a vector where the i'th index gives the type
+      of data type of i'th column.
+
+vector<pair<string,string>> -> insert_into_table -> void
+    * no need to get the table name as there is only one
+      table
+    * use regex to:
+        1. get every column name that wants to be written to
+        2. get values to write to that column name
+    * write to tempFile
+        1. use for loop to interate through every element of inserValues
+        2. 
+
+ none -> create_database -> pair<string, ofstream>
+  * Create temp csv file "temp.csv"
+  * return the ofstream for us to write to
+
+string, ofstream -> write_to_terminal_and_file -> void
+  * write to terminal
+  * write output file
+
+void -> select_all_from_table -> stringstream (aref)
+  * open temp file as read
+count_all (aref)
+update_table(muazzam)
+delete_row(fahmi)
+
+
+Note: create a temp csv file where we can our tables to.
+
+
+------------------------------------
+Program starts by asking user for mdb input file path. 
+Create a temporary csv file using table's name
+
+---INSERTS---
+​​INSERT INTO customer(customer_id,customer_name,customer_city,customer_state,customer_country,customer_phone,customer_email) VALUES (1,'name1','city1','state1','country1','phone1','email1');
+​INSERT INTO customer(customer_id,customer_name,customer_city,customer_state,customer_country,customer_phone,customer_email) VALUES (2,'name2','city2','state2','country2','phone2','email2'); 
+​INSERT INTO customer(customer_id,customer_name,customer_city,customer_state,customer_country,customer_phone,customer_email) VALUES (3,'name3','city3','state3','country3','phone3','email3'); 
+​INSERT INTO customer(customer_id,customer_name,customer_city,customer_state,customer_country,customer_phone,customer_email) VALUES (4,'name4','city4','state4','country4','phone4','email4'); 
+INSERT INTO customer(customer_id,customer_name,customer_city,customer_state,customer_country,customer_email) VALUES (5,'name5','city5','state5','country5','email5'); 
+

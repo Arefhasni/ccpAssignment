@@ -1,0 +1,4 @@
+main function 
+    * get input file name
+    * if input file doesn't open, then exit with error
+    *
