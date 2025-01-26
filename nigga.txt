@@ -20,14 +20,50 @@ customer
 > INSERT INTO customer(customer_id,customer_name,customer_city,customer_state,customer_country,customer_phone,customer_email) VALUES (4,'name4','city4','state4','country4','phone4','email4'); 
 > INSERT INTO customer(customer_id,customer_name,customer_city,customer_state,customer_country,customer_email) VALUES (5,'name5','city5','state5','country5','email5'); 
 
+1,name1,city1,state1,country1,phone1,email1
+2,name2,city2,state2,country2,phone2,email2
+3,name3,city3,state3,country3,phone3,email3
+4,name4,city4,state4,country4,phone4,email4
 > SELECT * FROM customer;
+1,name1,city1,state1,country1,phone1,email1
+2,name2,city2,state2,country2,phone2,email2
+3,name3,city3,state3,country3,phone3,email3
+4,name4,city4,state4,country4,phone4,email4
+
 > TABLES;
 customer
 
 UPDATE customer SET customer_email='email333' WHERE customer_id=3;
+1,name1,city1,state1,country1,phone1,email1
+2,name2,city2,state2,country2,phone2,email2
+3,name3,city3,state3,country3,phone3,email3
+4,name4,city4,state4,country4,phone4,email4
 > SELECT * FROM customer;
+1,name1,city1,state1,country1,phone1,email1
+2,name2,city2,state2,country2,phone2,email2
+3,name3,city3,state3,country3,phone3,email3
+4,name4,city4,state4,country4,phone4,email4
+
 
 DELETE FROM customer WHERE customer_id=4;
+1,name1,city1,state1,country1,phone1,email1
+2,name2,city2,state2,country2,phone2,email2
+3,name3,city3,state3,country3,phone3,email3
+4,name4,city4,state4,country4,phone4,email4
 > SELECT * FROM customer;
+1,name1,city1,state1,country1,phone1,email1
+2,name2,city2,state2,country2,phone2,email2
+3,name3,city3,state3,country3,phone3,email3
+4,name4,city4,state4,country4,phone4,email4
 
+
+1,name1,city1,state1,country1,phone1,email1
+2,name2,city2,state2,country2,phone2,email2
+3,name3,city3,state3,country3,phone3,email3
+4,name4,city4,state4,country4,phone4,email4
 > SELECT COUNT(*) FROM customer;
+1,name1,city1,state1,country1,phone1,email1
+2,name2,city2,state2,country2,phone2,email2
+3,name3,city3,state3,country3,phone3,email3
+4,name4,city4,state4,country4,phone4,email4
+

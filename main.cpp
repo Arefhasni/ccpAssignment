@@ -14,7 +14,7 @@ pair<string, ofstream> create_database();
 pair<vector<pair<string, string>>, stringstream> create_table(ifstream &inFile);
 void insert_into_table(const vector<pair<string, string>> columnData, const string& queryInput, ofstream& tempFile);
 void write_to_terminal_and_file(const string& outputText, ofstream &outputFile);
-stringstream select_all_from_table();
+stringstream select_all_from_table(ofstream&);
 void delete_from_table(ofstream& tableCSV);
 
 void trim_string(string& str);
@@ -110,6 +110,10 @@ int main()
         else if (has_substring(line, "SELECT"))
         {
             outputTexts = "> " + line;
+            sStringPrint.clear();
+            sStringPrint << endl;
+            sStringPrint = move(select_all_from_table(fileOutput));
+            outputTexts = outputTexts + sStringPrint.str ();
         }
         else
         {
@@ -358,25 +362,23 @@ void insert_into_table(const vector<pair<string, string>> columnData, const stri
 
 #pragma insert endregion
 
-stringstream select_all_from_table()
+stringstream select_all_from_table(ofstream& outFile)
 {
     stringstream ss;
-    ifstream tempFile;
-
-    ss << "write";
-    ss << endl;
-
-    ofstream outFile;
+    ifstream tempFile("temp.csv");
     
     string s;
-    s = ss.str();
-    cout << s;
-    while (getline(ss, s))
+
+    ss << endl;
+    // Read each line from temp.csv
+    while (getline(tempFile, s))
     {
-        outFile << s;
+        ss << s << endl;     
+        outFile << s << endl;  
     }
 
-    return ss;
+    tempFile.close();  
+    return ss;         
 }
 
 // DELETE FUNCTION
